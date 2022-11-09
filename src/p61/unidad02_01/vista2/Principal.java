@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package p61.unidad02_01.Vista1;
+package p61.unidad02_01.vista2;
 
-import p61.unidad02_01.Modelo.Receta;
-import p61.unidad02_01.Modelo.Atencion;
-import p61.unidad02_01.Modelo.Dueño;
-import p61.unidad02_01.Modelo.Mascota;
-import p61.unidad02_01.Modelo.Telefono;
+import p61.unidad02_01.modelo1.Receta;
+import p61.unidad02_01.modelo1.Atencion;
+import p61.unidad02_01.modelo1.Dueño;
+import p61.unidad02_01.modelo1.Mascota;
+import p61.unidad02_01.modelo1.Telefono;
 /**
  *
  * @author morti
