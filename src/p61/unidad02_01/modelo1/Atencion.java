@@ -15,7 +15,6 @@ public class Atencion {
   private String Veterinario;
   private double costo;
   private Mascota mascota;
-  private int cantidadRecetas;
   private ArrayList<Receta> resetini;
 
     public Atencion(String Veterinario, double costo, Mascota mascota) {
@@ -58,7 +57,7 @@ public class Atencion {
         this.mascota = mascota;
     }
            public String toString() {
-        var retorno= "Atencion{" + "Veterinario=" + Veterinario + ", costo=" + costo + ", mascota=" + mascota + ","+ "cantidadRecetas=" + cantidadRecetas +"\n";
+        var retorno= "Atencion{" + "Veterinario=" + Veterinario + ", costo=" + costo + ", mascota=" + mascota + ","+"\n";
         for(var rezeta:this.resetini){
             retorno+=rezeta.toString()+"\n";
     }
