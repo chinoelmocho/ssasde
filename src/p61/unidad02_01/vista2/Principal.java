@@ -7,8 +7,10 @@ package p61.unidad02_01.vista2;
 import p61.unidad02_01.modelo1.Receta;
 import p61.unidad02_01.modelo1.Atencion;
 import p61.unidad02_01.modelo1.Dueño;
+import p61.unidad02_01.modelo1.Estudiante;
 import p61.unidad02_01.modelo1.Mascota;
 import p61.unidad02_01.modelo1.Telefono;
+import p61.unidad02_01.modelo1.Aignatura;
 /**
  *
  * @author morti
@@ -33,6 +35,13 @@ public class Principal {
         
        System.out.println(atencionnum1.toString()+"\n");
        System.out.println(mauricio.toString());
+    
+    var juanito = new Estudiante("Juan Pelaez","0106195951");
+    var pedrito= new Estudiante("Pedro Ochoa","0106987523");
+    var asignature = new Aignatura("Matemathics","100 ciclos");
+    asignature.listestudiante(juanito);
+     asignature.listestudiante(pedrito);
+     System.out.println(asignature.toString());
     }
     
 }
