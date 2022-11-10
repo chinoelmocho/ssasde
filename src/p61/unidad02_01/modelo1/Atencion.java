@@ -4,6 +4,8 @@
  */
 package p61.unidad02_01.modelo1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author LAB-2
@@ -14,29 +16,21 @@ public class Atencion {
   private double costo;
   private Mascota mascota;
   private int cantidadRecetas;
-  private Receta[] resetini;
+  private ArrayList<Receta> resetini;
 
-    public Atencion(String Veterinario, double costo, Mascota mascota, int cantidadRecetasl) {
+    public Atencion(String Veterinario, double costo, Mascota mascota) {
         this.Veterinario = Veterinario;
         this.costo = costo;
         this.mascota = mascota;
-        this.cantidadRecetas = cantidadRecetasl;
-        this.resetini = new Receta[ cantidadRecetasl];
+        this.resetini = new ArrayList<Receta>();
 
     }
-    public void recetas(String medicamento, int cantidad, String indicacion,int posicion){
+    public void recetas(String medicamento, int cantidad, String indicacion){
     var recetas=new Receta(medicamento,cantidad,indicacion);
-    this.resetini[posicion]=recetas;}
+    this.resetini.add(recetas);
+    }
 
     
-
-    public Receta[] getResetini() {
-        return resetini;
-    }
-
-    public void setResetini(Receta[] resetini) {
-        this.resetini = resetini;
-    }
 
   
 
@@ -63,28 +57,7 @@ public class Atencion {
     public void setMascota(Mascota mascota) {
         this.mascota = mascota;
     }
-
-    public int getCantidadRecetasl() {
-        return cantidadRecetas;
-    }
-
-    public void setCantidadRecetasl(int cantidadRecetasl) {
-        this.cantidadRecetas = cantidadRecetasl;
-    }
-         
-    public Receta[] getRecetalist() {
-        return resetini;
-    }
-
-    public void setRecetalist(Receta[] recetalist) {
-        this.resetini = recetalist;
-    
-    
-  
-    
-}
-
-    public String toString() {
+           public String toString() {
         var retorno= "Atencion{" + "Veterinario=" + Veterinario + ", costo=" + costo + ", mascota=" + mascota + ","+ "cantidadRecetas=" + cantidadRecetas +"\n";
         for(var rezeta:this.resetini){
             retorno+=rezeta.toString()+"\n";

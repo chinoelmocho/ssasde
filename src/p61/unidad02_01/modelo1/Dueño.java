@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package p61.unidad02_01.modelo1;
-
+import java.util.ArrayList;
 /**
  *
  * @author Mauricio Ortiz Ochoa
@@ -12,22 +12,19 @@ public class Dueño {
     
     private String cedula;
     private String nombre;
-    private int cantidadTelefonos;
-    private Telefono [] telefonoList;
+    private ArrayList<Telefono> telefonolist;
     
 
-    public Dueño(String cedula, String nombre, int cantidadTelefonos,int cantidadRecetas) {
+    public Dueño(String cedula, String nombre) {
 
         this.cedula = cedula;
         this.nombre = nombre;
-        this.cantidadTelefonos = cantidadTelefonos;
-        this.telefonoList = new Telefono[this.cantidadTelefonos];
-        
+         this.telefonolist = new ArrayList<Telefono>();
     }
     
-    public void nuevoTelefono(String numero, int extension, String tipoTelefono, String operadora, int posicion){
-        var telefono = new Telefono(numero, extension, tipoTelefono, operadora);
-        this.telefonoList[posicion]=telefono;
+    public void nuevoTelefono(String numero, int extension, String tipoTelefono, String operadora){
+        var telefono1 = new Telefono(numero, extension, tipoTelefono, operadora);
+        this.telefonolist.add(telefono1);
     } 
     
 
@@ -46,28 +43,13 @@ public class Dueño {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public int getCantidadTelefonos() {
-        return cantidadTelefonos;
-    }
-
-    public void setCantidadTelefonos(int cantidadTelefonos) {
-        this.cantidadTelefonos = cantidadTelefonos;
-    }
-
-    public Telefono[] getTelefonoList() {
-        return telefonoList;
-    }
-
-    public void setTelefonoList(Telefono[] telefonoList) {
-        this.telefonoList = telefonoList;
-    }
-
+   
+    
     public String mostarinfo() {
         var retorno= "Dueño{" + "cedula=" + cedula + ", nombre=" + nombre 
-                + ", cantidadTelefonos=" + cantidadTelefonos 
+               
                 + ", telefonoList="+"\n";
-        for (var telefono:this.telefonoList){
+        for (var telefono:this.telefonolist){
         retorno+=telefono.toString()+"\n";
         }
   
