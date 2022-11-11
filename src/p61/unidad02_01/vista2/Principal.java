@@ -10,7 +10,12 @@ import p61.unidad02_01.modelo1.Dueño;
 import p61.unidad02_01.modelo1.Estudiante;
 import p61.unidad02_01.modelo1.Mascota;
 import p61.unidad02_01.modelo1.Telefono;
-import p61.unidad02_01.modelo1.Aignatura;
+import p61.unidad02_01.modelo1.Asignatura;
+import p61.unidad02_01.modelo1.Jugador;
+import java.time.LocalDate;
+import java.time.Month;
+import p61.unidad02_0.servicio.JugadorServicio;
+
 /**
  *
  * @author morti
@@ -38,10 +43,22 @@ public class Principal {
     
     var juanito = new Estudiante("Juan Pelaez","0106195951");
     var pedrito= new Estudiante("Pedro Ochoa","0106987523");
-    var asignature = new Aignatura("Matemathics","100 ciclos");
+    var asignature = new Asignatura("Matemathics","100 ciclos");
     asignature.listestudiante(juanito);
      asignature.listestudiante(pedrito);
      System.out.println(asignature.toString());
-    }
-    
+     
+     
+     
+     var jugador13 =new Jugador("Juan",80,173,LocalDate.of(2003,8,26));
+      var jugador14 =new Jugador("Pedro",56,160,LocalDate.of(2002,7,5));
+       var jugador15 =new Jugador("Diego",70,180,LocalDate.of(2003,8,26));
+     var basedeDatos=new JugadorServicio();
+     basedeDatos.crear(jugador13);
+     basedeDatos.crear(jugador14);
+     basedeDatos.crear(jugador15);
+     System.out.println(basedeDatos.listar());
+     
+
+    }   
 }
